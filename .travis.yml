@@ -1,9 +1,7 @@
 language: node_js
 node_js:
-- "7"
+- "8"
 before_deploy:
-- npm install -g hexo
-- npm install
 - hexo generate
 deploy:
   provider: pages
