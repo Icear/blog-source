@@ -1,0 +1,18 @@
+language: node_js
+before_deploy:
+- npm install -g hexo
+- npm install
+- hexo generate
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  on:
+    branch: master
+  local_dir: public
+  repo: Icear/Icear.github.io # optional, defaults to current repo
+  local_dir: public # optional, defaults to the current directory
+  target_branch: master # optional, defaults to "gh-pages"
+env:
+  global:
+    secure: LOz5xWaMqG9BF87hJ9Vi50vurVgXIWuY8ar7J5bBD9pD31L03IVpJc2SFNBnyrNSpGN18GDOalouDIOJRY9Tm959HbxmMLaxmHff2oZejNN8UpSP6vMQxOS7Tv2two1YdbCfUQFix0YDGZBq3GTPlbwzG2rrXAbQtRCJx7EzukORHJqFwhDTE1zISmtEZnq9kZwe9+LlEkdaTT2vdi6S9/OTcIzT/cOohl8CIPwqURx2FvbObfRTdyITV037CIB8PN2Pb+8H/yB/1ZaJ5GCHe9F/32XmYvrGPUl50aMde8r0hwjJn3wdNWLPn62H9HNrgA/nuUMto5dEyvvkhwE2QzNnzhB8QUJxyn5zdC8FSeGw/3FckTWY0+cK8T62s0QrxUoNarY2f0zBT+MDa/m3q4KuiU8bVhwD4KXU8VsiIJZ/0cJv1tIcCxolS8X8mdkrhyb6I5f2V93XVcMCQXAsXy48syWXkIXA/AWddLOo4pkqIlyC6Kz4n/WuwGhPnnM4wpPP+as5xqEIPEhsmtWzcAKSEGuRSvSnhMeYx05N+AejRPxP37AGNVg1N/WJj/zQKoyFjpBi5LRIxG+CGpY4Bxz4YwjfGivnVhSJH1x6/VR8znfQUH3GTE/L5LCFDxO8DjMqIdpPJH1e2oZM08q+nQVRE9WR+7YHBENc7hAQdWc=
