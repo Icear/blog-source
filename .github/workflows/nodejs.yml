@@ -14,9 +14,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Setup hexo environment
+    - name: prepare node package
       run: |
-        npm install hexo-cli -g
         npm ci
       env:
         CI: true
@@ -32,8 +31,8 @@ jobs:
         git config --global user.email "Icear@users.noreply.github.com"
     - name: generate 
       run: |
-        hexo clean
-        hexo generate
+        node run clean
+        node run build
     - name: publish
       run: |
-        hexo deploy
+        node run deploy
