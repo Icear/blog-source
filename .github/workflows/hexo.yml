@@ -1,0 +1,37 @@
+name: Hexo Deploy
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [8.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Setup hexo environment
+      run: |
+        npm install hexo-cli -g
+        npm ci
+    - name: Setup git environment
+      env:
+        ACTION_DEPLOY_KEY: ${{secrets.ACTION_DEPLOY_KEY}}
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        git config --global user.name "icear"
+        git config --global user.email "Icear@users.noreply.github.com"
+    - name: generate and publish
+      run: |
+        hexo clean
+        hexo generate
+        hexo deploy
+      env:
+        CI: true
