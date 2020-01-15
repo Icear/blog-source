@@ -34,8 +34,8 @@ jobs:
         git config --global user.email "Icear@users.noreply.github.com"
     - name: generate 
       run: |
-        node run clean
-        node run build
+        npm run clean
+        npm run build
     - name: publish
       run: |
-        node run deploy
+        npm run deploy
