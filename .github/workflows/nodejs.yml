@@ -10,6 +10,9 @@ jobs:
         node-version: [13.x]
     steps:
     - uses: actions/checkout@v1
+    - name: update submodule
+      run: |
+        git submodule update
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
