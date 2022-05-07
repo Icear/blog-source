@@ -34,6 +34,7 @@ jobs:
         git config --global user.email "Icear@users.noreply.github.com"
     - name: generate 
       run: |
+        hexo version
         npm run clean
         npm run build
     - name: publish
