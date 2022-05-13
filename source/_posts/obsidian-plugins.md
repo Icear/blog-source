@@ -1,8 +1,8 @@
 ---
 author: Icear
-title: Obsidian插件
+title: Obsidian插件使用记录
 index:  20220409190414
-updated: 2022-04-09 21:04
+updated: 2022-05-13 18:54
 date: 2022-04-09 19:10
 aliases: Untitled 
 description: 
@@ -10,7 +10,7 @@ finished: false
 tags:  [TemplaterCreated, Document, ZKCard, Obsidian, ObsidianPlugin]
 ---
 
-# Obsidian插件
+# Obsidian插件使用记录
 
 ## 开端
 
