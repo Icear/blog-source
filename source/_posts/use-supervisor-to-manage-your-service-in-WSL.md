@@ -2,7 +2,7 @@
 title: 使用 supervisor 来管理 WSL 上的服务并实现开机自启动 
 date: 2020-01-17 17:46:53
 updated: 2020-01-17 17:46:53
-tags: [Supervisor, WSL, Service Manage]
+tags: [Supervisor, WSL, Service Management]
 ---
 
 WSL 是 Windows 下的 Linux 子系统，通过兼容层实现在 Windows 平台上模拟 Linux 环境，不像 WSL2 拥有完整的 Linux 内核。这使得很多依赖内核机制的应用都无法使用，比如说 system-init 和 docker。没有 system-init 支持之后常用的服务管理工具 systemctl 也就失效了，虽然可以通过 service 命令来操作，但是遇到需要自定义服务的时候，service 就显得有些简陋了：需要手写较长的脚本配置外加不支持自动重启等。此时就需要 supervisor 了，基于子进程的服务管理方式不需要内核支持，能够在 WSL 环境很好的工作
