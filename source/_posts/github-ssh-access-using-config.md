@@ -1,7 +1,9 @@
 ---
 title: Linux 下配置通过 SSH KEY 访问 Github 以及自定义 key 名后的配置
 date: 2020-01-15 20:40:31
+updated: 2020-01-15 20:40:31
 tags: [Linux, Github, SSH key]
+toc: true
 ---
 
 最近将开发环境集体转移到了 WSL 环境，既然是 Linux 的环境就用 Linux 的机制。在 Windows 下常用储存敏感凭据的方式是 Windows 凭据管理，git 对此有较好的支持，可以直接储存账号密码；而在 linux 下 ssh key 是个更加方便的方式，可以把各种凭据收容在一起管理。于是切换环境后远端 git 仓库的访问就改成使用 ssh key 了。下面把过程列出：

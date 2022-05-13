@@ -1,6 +1,7 @@
 ---
-title: c++-use-priority-queue-with-custom-compare-function
+title: C++ 使用带自定义比较函数的优先队列
 date: 2020-03-21 16:13:08
+updated: 2020-03-21 16:13:08
 tags: [c++, queue, priority_queue, cmp, operator extend]
 ---
 

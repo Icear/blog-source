@@ -1,6 +1,7 @@
 ---
 title: 使用 supervisor 来管理 WSL 上的服务并实现开机自启动 
 date: 2020-01-17 17:46:53
+updated: 2020-01-17 17:46:53
 tags: [Supervisor, WSL, Service Manage]
 ---
 
