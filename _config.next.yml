@@ -102,9 +102,9 @@ creative_commons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+# scheme: Muse
 # scheme: Mist
-# scheme: Pisces
+scheme: Pisces
 # scheme: Gemini
 
 # Dark Mode
@@ -127,7 +127,7 @@ menu:
   #categories: /categories/ || th
   archives: /archives/ || archive
   # schedule: /schedule/ || calendar
-  # sitemap: /sitemap.xml || sitemap
+  sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
 # Enable / Disable menu icons / item badges.
