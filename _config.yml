@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Icear's little world
+title: Icear's blog
 subtitle:
 description:
 keywords:
@@ -27,18 +27,6 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-
-# Creative Commons
-creative_commons:
-  # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero
-  license: by-nc-sa
-  # Available values: big | small
-  size: small
-  sidebar: false
-  post: true
-  # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
-  # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
-  language: zh-CN
 
 # Writing
 new_post_name: :title.md # File name of new posts
