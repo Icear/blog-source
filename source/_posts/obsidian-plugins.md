@@ -7,6 +7,7 @@ date: 2022-04-09 19:10
 aliases: Untitled 
 description: 
 finished: false
+tags:  [TemplaterCreated, Document, ZKCard, Obsidian, ObsidianPlugin]
 ---
 
 # Obsidian插件
